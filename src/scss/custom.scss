@@ -34,12 +34,13 @@ $colors: (
 $theme-colors:(
     "azure": $azure,
     "purple": $purpure,
-    "gules":$gules,
+    "purpure": $purpure,
+    "gules": $gules,
     "orange": $orange,
-    "or":$or,
-    "vert":$vert,
-    "argent":$argent,
-    "sable":$sable,
+    "or": $or,
+    "vert": $vert,
+    "argent": $argent,
+    "sable": $sable,
 );
 
 
@@ -51,5 +52,15 @@ $theme-colors:(
     width: 50px;
     height: 60px;
 };
+
+@for $h from 1 to 6 {
+    h#{$h} {
+        font-family: $font-family-sans-serif;
+    }
+}
+
+h1 {
+    font-family: $font-family-sans-serif;
+}
 
 @import '~bootstrap/scss/bootstrap.scss';

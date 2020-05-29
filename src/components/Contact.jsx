@@ -10,7 +10,7 @@ export default function Contact() {
   }
 
   return (
-    <MainSection color="azure">
+    <MainSection title="Send me a Message" color="azure">
       <Row id="contact" className="justify-content-md-center">
         <Col md={8} onSubmit={submitCorrespondence}>
           <Form>
