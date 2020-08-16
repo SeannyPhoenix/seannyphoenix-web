@@ -1,19 +1,19 @@
-import SDP from './seanny-drakon-phoenix.svg';
-import SectionI from './section-i.svg';
-import SectionII from './section-ii.svg';
-import SectionIII from './section-iii.svg';
-import SectionIV from './section-iv.svg';
-import SectionV from './section-v.svg';
-import SectionVI from './section-vi.svg';
+import sable from './seanny-drakon-phoenix.svg';
+import gules from './gules.svg';
+import orange from './orange.svg';
+import or from './or.svg';
+import vert from './vert.svg';
+import azure from './azure.svg';
+import purpure from './purpure.svg';
 
 const Shields = {
-  SDP,
-  SectionI,
-  SectionII,
-  SectionIII,
-  SectionIV,
-  SectionV,
-  SectionVI,
+  sable,
+  gules,
+  orange,
+  or,
+  vert,
+  azure,
+  purpure,
 };
 
 export default Shields;

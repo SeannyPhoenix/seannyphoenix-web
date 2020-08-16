@@ -1,18 +1,16 @@
 import React from 'react';
-import { Row, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import './scss/custom.scss';
-import Header from './components/Header';
-import Menu from './components/Menu';
-import Main from './components/Main';
+import sections from './assets/info';
+import Section from './components/section/Section';
+
 
 function App() {
+  const site = sections.map((section) => <Section key={Math.random()} section={section} />);
+
   return (
     <Container fluid="md">
-      <Header />
-      <Row className="h-100">
-        <Menu />
-        <Main />
-      </Row>
+      {site}
     </Container>
   );
 }
