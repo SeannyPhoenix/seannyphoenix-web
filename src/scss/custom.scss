@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Raleway:ital@0;1&display=swap');
 
-$font-family-sans-serif: Raleway, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif: Raleway,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+"Noto Sans",
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji" !default;
 
 
 // http://blog.heraldicart.org/2018/02/07/heraldic-tincture-hexcodes/
@@ -13,34 +25,32 @@ $vert: #149414;
 $purpure: #965578;
 $orange: #FAA401;
 
-$colors: (
-    "blue": $azure,
-    "azure": $azure,
-    "purple": $purpure,
-    "purpure": $purpure,
-    "red":$gules,
-    "gules":$gules,
-    "orange": $orange,
-    "yellow":$or,
-    "or":$or,
-    "green":$vert,
-    "vert":$vert,
-    "white":$argent,
-    "argent":$argent,
-    "black":$sable,
-    "sable":$sable,
+$colors: ("blue": $azure,
+  "azure": $azure,
+  "purple": $purpure,
+  "purpure": $purpure,
+  "red":$gules,
+  "gules":$gules,
+  "orange": $orange,
+  "yellow":$or,
+  "or":$or,
+  "green":$vert,
+  "vert":$vert,
+  "white":$argent,
+  "argent":$argent,
+  "black":$sable,
+  "sable":$sable,
 );
 
-$theme-colors:(
-    "azure": $azure,
-    "purple": $purpure,
-    "purpure": $purpure,
-    "gules": $gules,
-    "orange": $orange,
-    "or": $or,
-    "vert": $vert,
-    "argent": $argent,
-    "sable": $sable,
+$theme-colors:("azure": $azure,
+  "purple": $purpure,
+  "purpure": $purpure,
+  "gules": $gules,
+  "orange": $orange,
+  "or": $or,
+  "vert": $vert,
+  "argent": $argent,
+  "sable": $sable,
 );
 
 body {
@@ -49,22 +59,24 @@ body {
 }
 
 .arms {
-    width: 50px;
-    height: 60px;
-};
+  width: 50px;
+  height: 60px;
+}
+
+;
 
 @for $h from 1 to 6 {
-    h#{$h} {
-        font-family: $font-family-sans-serif;
-    }
+  h#{$h} {
+    font-family: $font-family-sans-serif;
+  }
 }
 
 a {
-  color: $argent !important;
+  color: #eee !important;
 }
 
 .item-card {
-    width: 15rem;
+  width: 15rem;
 }
 
 .item-card-contact {
@@ -72,10 +84,11 @@ a {
 }
 
 .card {
-  background-color: $sable !important;
+  background-color: #222 !important;
 }
 
-@each $name, $value in $colors {
+@each $name,
+$value in $colors {
   .card-#{$name} {
     border-color: $value !important;
     color: $value;
