@@ -1,76 +1,29 @@
 'use client';
 
-import {useState} from 'react';
-import styled from 'styled-components';
+import { Page, Vert } from 'components/common';
+import Form from 'components/form/Form';
+import BinaryTime from 'components/panels/binarytime/BinaryTime';
+import React, {ReactNode, useState} from 'react';
 
-//#region CSS
-const Vert = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  width: 400px;
-`
-//#endregion
+type PanelName = 'form' | 'binarytime'
 
-type FormData = {
-  name: string;
-  color: string;
-  place: string;
-};
+const panels: Record<PanelName, () => ReactNode> = {
+  'form': Form,
+  'binarytime': BinaryTime,
+}
 
 export default function Home() {
-  const [formData, setFormdata] = useState<FormData>({
-    name: '',
-    color: '',
-    place: ''
-  });
+  const [panelName, setPanelName] = useState<PanelName>('binarytime')
 
-  const [savedData, setSavedData] = useState<FormData | null>(null);
-
-  function handleChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    const {name, value} = event.target;
-    setFormdata((prevData) => ({
-      ...prevData,
-      [name]: value
-    }));
-  }
-
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setSavedData(formData);
-  }
+  const Panel = panels[panelName]
 
   return (
-    <div>
-      Seanny Phoenix
-      <form
-        onSubmit={handleSubmit}
-      >
-        <Vert>
-          <input
-            type="text"
-            placeholder="Name"
-            value={formData.name}
-            onChange={handleChange}
-            name="name"
-          />
-          <input
-            type="text"
-            placeholder="Color"
-            value={formData.color}
-            onChange={handleChange}
-            name="color"
-          />
-          <textarea
-            placeholder="Place"
-            value={formData.place}
-            onChange={handleChange}
-            name="place"
-          />
-          <button type="submit">Submit</button>
-        </Vert>
-      </form>
-      <pre>{JSON.stringify({formdata: formData, savedData}, null, '  ')}</pre>
-    </div>
+    <Page>
+      <Vert>
+      <button onClick={()=>setPanelName('form')}>Form</button>
+      <button onClick={()=>setPanelName('binarytime')}>Binary Time</button>
+      </Vert>
+      <Panel />
+    </Page>
   );
 }
