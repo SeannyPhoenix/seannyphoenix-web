@@ -10,9 +10,11 @@
   "customizations": {
 		"vscode": {
 			"extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
         "ms-azuretools.vscode-docker",
-				"styled-components.vscode-styled-components"
-			]
+        "styled-components.vscode-styled-components"
+      ]
 		}
 	}
 }
