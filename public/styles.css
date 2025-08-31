@@ -1,0 +1,57 @@
+body {
+  background: #181a1b;
+  color: #e0e0e0;
+  font-family: system-ui, sans-serif;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 20px;
+  padding: 1em;
+}
+
+input[type="file"] {
+  display: inline;
+  background: #222;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  padding: 0.5em;
+  border-radius: 4px;
+}
+
+#tableDataContainer {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #222;
+    color: #e0e0e0;
+  }
+
+  th,
+  td {
+    border: 1px solid #444;
+    padding: 0.5em;
+  }
+
+  th {
+    background: #333;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  div {
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+.hidden {
+  display: none;
+}

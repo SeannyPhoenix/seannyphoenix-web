@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "serve public"
+    "start": "serve public",
+    "watch": "tsc --watch",
+    "build": "node build.js"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
+    "esbuild": "^0.25.9",
     "eslint": "^9",
     "serve": "^14.2.4",
     "typescript": "^5"

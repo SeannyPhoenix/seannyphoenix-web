@@ -2,11 +2,12 @@
   "compilerOptions": {
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "types": [], // Explicitly specify no global types like 'node'
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": false,
-    "outDir": "./dist",
+    "outDir": "./public/dist",
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
