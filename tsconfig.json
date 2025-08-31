@@ -5,7 +5,8 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "noEmit": true,
+    "noEmit": false,
+    "outDir": "./dist",
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -13,14 +14,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-      }
-    ],
+    "plugins": [{}],
     "paths": {
       "@/*": ["./src/*"]
     },
-    "baseUrl": "src/",
+    "baseUrl": "src/"
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

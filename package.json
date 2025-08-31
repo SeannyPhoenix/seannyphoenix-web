@@ -2,11 +2,14 @@
   "name": "seannyphoenix.com",
   "version": "0.1.0",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "start": "serve public"
+  },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "eslint": "^9",
+    "serve": "^14.2.4",
     "typescript": "^5"
   },
   "dependencies": {
