@@ -1,4 +1,4 @@
-import { processCSV } from "csv";
+import { loadFile } from "./fileHandlers";
 
 const fileInput = document.getElementById("csvFileInput") as HTMLInputElement;
 
@@ -15,7 +15,9 @@ const tableData = document.getElementById(
 if (!fileInput || !tableSelector || !rawSelector || !rawData || !tableData) {
   console.error("One or more elements not found");
 } else {
-  fileInput.addEventListener("change", loadFile);
+  fileInput.addEventListener("change", (event) =>
+    loadFile(event, rawData, tableData)
+  );
 
   tableSelector.addEventListener("click", () => {
     tableData.style.display = "block";
@@ -26,21 +28,4 @@ if (!fileInput || !tableSelector || !rawSelector || !rawData || !tableData) {
     tableData.style.display = "none";
     rawData.style.display = "block";
   });
-}
-
-async function loadFile(event: Event) {
-  const { files } = event.target as HTMLInputElement;
-  if (files?.length) {
-    try {
-      const { rawDisplay, structuredDisplay } = await processCSV(files[0]);
-
-      rawData.innerHTML = "";
-      rawData.appendChild(rawDisplay);
-
-      tableData.innerHTML = "";
-      tableData.appendChild(structuredDisplay);
-    } catch (error) {
-      console.error("Error reading file:", error);
-    }
-  }
 }

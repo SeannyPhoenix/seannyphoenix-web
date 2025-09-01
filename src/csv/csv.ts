@@ -17,9 +17,9 @@ export function parseCSV(raw: string): CSVData {
   };
 }
 
-function split(row: string) {
+function split(row: string): string[] {
   return row.split(",").map(trim);
 }
-function trim(s: string) {
+function trim(s: string): string {
   return s.trim();
 }
