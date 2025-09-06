@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "types": [], // Explicitly specify no global types like 'node'
+    "types": ["node"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,

@@ -5,11 +5,12 @@
   "scripts": {
     "start": "serve public",
     "watch": "tsc --watch",
-    "build": "node build.js"
+    "build": "node build.js",
+    "build-watch": "node build.js --watch"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
+    "@types/node": "^20.19.13",
     "esbuild": "^0.25.9",
     "eslint": "^9",
     "serve": "^14.2.4",
