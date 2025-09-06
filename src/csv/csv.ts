@@ -8,7 +8,10 @@ export function parseCSV(raw: string): CSVData {
     return { headers: [], rows: [] }; // Early return for empty input
   }
 
-  const rawRows = raw.split("\n").map(trim);
+  const rawRows = raw
+    .split("\n")
+    .map(trim)
+    .filter((row) => row.length > 0);
   const [headerRow, ...dataRows] = rawRows.map(split);
 
   return {
@@ -20,6 +23,7 @@ export function parseCSV(raw: string): CSVData {
 function split(row: string): string[] {
   return row.split(",").map(trim);
 }
+
 function trim(s: string): string {
   return s.trim();
 }

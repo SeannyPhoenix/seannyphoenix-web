@@ -1,4 +1,6 @@
+import clock from "components/clock";
 import { loadFile } from "./fileHandlers";
+import { glyph } from "svg/svg";
 
 const fileInput = document.getElementById("csvFileInput") as HTMLInputElement;
 
@@ -12,7 +14,16 @@ const tableData = document.getElementById(
   "tableDataContainer"
 ) as HTMLDivElement;
 
-if (!fileInput || !tableSelector || !rawSelector || !rawData || !tableData) {
+const currentTime = document.getElementById("currentTime") as HTMLDivElement;
+
+if (
+  !fileInput ||
+  !tableSelector ||
+  !rawSelector ||
+  !rawData ||
+  !tableData ||
+  !currentTime
+) {
   console.error("One or more elements not found");
 } else {
   fileInput.addEventListener("change", (event) =>
@@ -28,4 +39,6 @@ if (!fileInput || !tableSelector || !rawSelector || !rawData || !tableData) {
     tableData.style.display = "none";
     rawData.style.display = "block";
   });
+
+  clock(currentTime);
 }

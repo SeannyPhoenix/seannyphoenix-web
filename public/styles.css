@@ -12,6 +12,12 @@ body {
   padding: 1em;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 input[type="file"] {
   display: inline;
   background: #222;

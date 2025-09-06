@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSV Viewer</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="../dist/bundle.js" defer></script>
+    <script src="../build/bundle.js" defer></script>
   </head>
   <body>
     <div class="content">
-      <h1>CSV Viewer</h1>
+      <div class="header">
+        <h1>CSV Viewer</h1>
+        <div id="currentTime"></div>
+      </div>
       <input type="file" id="csvFileInput" accept=".csv,.txt" />
       <div class="results">
         <div class="buttons">
