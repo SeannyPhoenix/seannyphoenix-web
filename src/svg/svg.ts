@@ -29,7 +29,7 @@ export function glyph(num: number) {
 }
 
 export function dot() {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="25" height="100"><circle cx="12.5" cy="75" r="5" fill="currentColor" />${svgEnd}`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="100"><circle cx="5" cy="75" r="5" fill="currentColor" />${svgEnd}`;
 }
 
 export default function glyphs(num: Uint8Array) {
