@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This document outlines the development plan for the JSON Schema validation and building tool. See [detailed requirements](src/json-schema/docs/REQUIREMENTS.md) for comprehensive specifications.
+This document outlines the development plan for the JSON Schema validation and building tool. See [detailed requirements](REQUIREMENTS.md) for comprehensive specifications.
 
 ## GitHub Project Management Strategy
 
