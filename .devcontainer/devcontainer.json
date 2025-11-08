@@ -18,5 +18,8 @@
         "ms-azuretools.vscode-docker"
       ]
     }
+  },
+  "postCreateCommand": {
+    "npm-install": "npm install"
   }
 }
