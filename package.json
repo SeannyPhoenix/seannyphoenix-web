@@ -13,7 +13,7 @@
     "@types/node": "^20.19.13",
     "esbuild": "^0.25.9",
     "eslint": "^9",
-    "serve": "^14.2.4",
+    "serve": "^14.2.5",
     "typescript": "^5"
   },
   "dependencies": {
